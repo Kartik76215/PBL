@@ -117,7 +117,7 @@ void loadJobsFromFile(const char* filename) {
         return;
     }
 
-    // Free existing job list first
+    
     Job* current = jobList;
     while (current) {
         Job* temp = current;
@@ -128,7 +128,7 @@ void loadJobsFromFile(const char* filename) {
 
     char line[3 * MAX_LEN];
     while (fgets(line, sizeof(line), file)) {
-        // Remove trailing newline if any
+        
         line[strcspn(line, "\n")] = 0;
 
         char* title = strtok(line, ",");
@@ -207,7 +207,7 @@ void printMenu() {
 
 void readLine(char* buffer, int size) {
     if (fgets(buffer, size, stdin)) {
-        // Remove newline
+       
         buffer[strcspn(buffer, "\n")] = '\0';
     }
 }
@@ -219,11 +219,11 @@ int main() {
     do {
         printMenu();
         if (scanf("%d", &choice) != 1) {
-            while (getchar() != '\n'); // clear invalid input
+            while (getchar() != '\n'); 
             printf("\nInvalid input. Try again.\n\n");
             continue;
         }
-        getchar(); // consume newline after number input
+        getchar(); 
 
         switch (choice) {
             case 1:
