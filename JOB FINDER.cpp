@@ -183,8 +183,8 @@ void showGraphicsAnimation() {
         angle += 5;
         delay(50);
     }
-    delay(500);  // short pause
-    cleardevice(); // clear animation
+    delay(500);  
+    cleardevice(); 
     setcolor(WHITE);
     outtextxy(getmaxx() / 2 - 70, getmaxy() / 2, "Job Finder!");
     delay(1500);
@@ -201,7 +201,7 @@ void printfce(const char* text) {
     printf("%s\n", text);
 }
 int main() {
-    showGraphicsAnimation(); // At program start
+    showGraphicsAnimation(); 
 
 
 
@@ -332,7 +332,7 @@ int main() {
     freeJobs();
     freeApplicants();
 
-    showGraphicsAnimation(); // At program end
+    showGraphicsAnimation(); 
 
     return 0;
 }
